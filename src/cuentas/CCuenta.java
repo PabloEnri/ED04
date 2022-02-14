@@ -9,23 +9,44 @@ public class CCuenta {
     private String cuenta;
     private double saldo;
     private double tipoInterés;
-
+    
+    /**
+     * Constructor de la clase sin parámetros
+     */
     public CCuenta()
     {
     }
-
+            
+       /**
+     * Constructor de la clase con parámetros
+     * 
+     * @param nom String
+     * @param cue String
+     * @param sal Double
+     * @param tipo Double
+     */    
     public CCuenta(String nom, String cue, double sal, double tipo)
     {
         nombre =nom;
         cuenta=cue;
         saldo=sal;
     }
-
+    
+    /**
+     * Devuelve el saldo de la cuenta
+     * @return 
+     */
     public double estado()
     {
         return getSaldo();
     }
 
+        /**
+     * Añade la cantidad indicada por parámetro al saldo
+     * 
+     * @param cantidad Double
+     * @throws Exception 
+     */
     public void ingresar(double cantidad) throws Exception
     {
         if (cantidad<0)
@@ -33,6 +54,12 @@ public class CCuenta {
         setSaldo(getSaldo() + cantidad);
     }
 
+     /**
+     * Resta la cantidad indicada por parámetro al saldo
+     * 
+     * @param cantidad Double
+     * @throws Exception 
+     */
     public void retirar(double cantidad) throws Exception
     {
         if (cantidad <= 0)
@@ -43,6 +70,8 @@ public class CCuenta {
     }
 
     /**
+     *Metodo get de Nombre
+     *
      * @return the nombre
      */
     public String getNombre() {
@@ -50,6 +79,8 @@ public class CCuenta {
     }
 
     /**
+     * Metodo set de Nombre
+     * 
      * @param nombre the nombre to set
      */
     public void setNombre(String nombre) {
@@ -57,6 +88,8 @@ public class CCuenta {
     }
 
     /**
+     * Metodo get de Cuenta
+     * 
      * @return the cuenta
      */
     public String getCuenta() {
@@ -64,6 +97,8 @@ public class CCuenta {
     }
 
     /**
+     * Metodo set de Cuenta
+     * 
      * @param cuenta the cuenta to set
      */
     public void setCuenta(String cuenta) {
@@ -71,6 +106,8 @@ public class CCuenta {
     }
 
     /**
+     * Metodo get de Saldo
+     * 
      * @return the saldo
      */
     public double getSaldo() {
@@ -78,6 +115,8 @@ public class CCuenta {
     }
 
     /**
+     * Metodo set de Saldo
+     * 
      * @param saldo the saldo to set
      */
     public void setSaldo(double saldo) {
@@ -85,6 +124,8 @@ public class CCuenta {
     }
 
     /**
+     * Metodo get de TipoInteres
+     * 
      * @return the tipoInterés
      */
     public double getTipoInterés() {
@@ -92,6 +133,8 @@ public class CCuenta {
     }
 
     /**
+     * Metodo Set de TipoInteres
+     * 
      * @param tipoInterés the tipoInterés to set
      */
     public void setTipoInterés(double tipoInterés) {
